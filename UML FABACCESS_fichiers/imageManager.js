@@ -1,0 +1,3 @@
+var module$imageManager={};
+(function(){window.GLIFFY=window.GLIFFY||{};window.GLIFFY.ONLINE=window.GLIFFY.ONLINE||{};window.GLIFFY.ONLINE.INTEGRATION=window.GLIFFY.ONLINE.INTEGRATION||{};window.GLIFFY.ONLINE.INTEGRATION.imageManager={getImageUrl:function(command,successCallback,errorCallback){var domain=window.location.protocol+"//"+window.location.host;if(command.indexOf(domain)===0)command=window.GLIFFY.API.getAuthUrl(command);successCallback(command)},getImageUrls:function(command,successCallback,errorCallback){successCallback([])},
+refreshControls:function(command,successCallback,errorCallback){}}})();

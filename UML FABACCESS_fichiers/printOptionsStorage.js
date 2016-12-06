@@ -1,0 +1,3 @@
+var module$printOptionsStorage={};
+(function(){window.GLIFFY=window.GLIFFY||{};window.GLIFFY.ONLINE=window.GLIFFY.ONLINE||{};window.GLIFFY.ONLINE.INTEGRATION=window.GLIFFY.ONLINE.INTEGRATION||{};window.GLIFFY.ONLINE.INTEGRATION.printOptionsStorage={getOptions:function(){var userModel=GliffyApp.authController.get("user");var preferences=userModel.getUserPreferences();var options={pageSize:preferences.printerPaperSize,portrait:true,displayPageBreaks:false,fitToOnePage:false};return options},setOptions:function(options){var userModel=GliffyApp.authController.get("user");
+if(GliffyApp.authController.isAuthenticated())userModel.setPreference("printerPaperSize",options.pageSize)}}})();
