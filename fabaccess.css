@@ -1,0 +1,169 @@
+#logo{
+  margin-left: 550px;
+  margin-top: 5px;
+  position: relative;
+}
+
+nav{
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+/*Bouton 1*/
+
+/* Dropdown Content (caché) */
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left: 316px;
+    margin-top: 66px;
+}
+
+/* liens dropdown */
+.dropdown-content1 a {
+    color: #65b4c2;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+}
+
+/* hover color */
+.dropdown-content1 a:hover {background-color: #f1f1f1}
+
+/* dropdown menu hover */
+.dropdown:hover .dropdown-content1 {
+    display: block;
+}
+
+/*style bouton*/
+.dropbtn1{
+  margin-left: 358px;
+  margin-top: 10px;
+  background-color: #65B4C2;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline-block;
+  position: absolute;
+}
+
+
+
+/*bouton 2*/
+
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left: 545px;
+    margin-top: 66px;
+}
+
+
+.dropdown-content2 a {
+    color: #65b4c2;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+}
+
+
+.dropdown-content2 a:hover {background-color: #f1f1f1}
+
+
+.dropdown:hover .dropdown-content2 {
+    display: block;
+}
+
+
+.dropbtn2{
+  margin-left: 565px;
+  margin-top: 10px;
+  background-color: #65B4C2;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline-block;
+  position: absolute;
+}
+
+
+/*bouton 3*/
+
+.dropdown-content3 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left: 751px;
+    margin-top: 66px;
+}
+
+
+.dropdown-content3 a {
+    color: #65b4c2;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+}
+
+
+.dropdown-content3 a:hover {background-color: #f1f1f1}
+
+
+.dropdown:hover .dropdown-content3 {
+    display: block;
+}
+
+
+
+.dropbtn3{
+  margin-left: 752px;
+  margin-top: 10px;
+  background-color: #65B4C2;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline-block;
+  position: absolute;
+}
+
+
+/*texte présentation accordeon*/
+#accordion{
+  margin-left: 140px;
+  margin-top: 113px;
+  border: 1px solid #65b4c2;
+  width: 970px;
+  height: 320px;
+  text-align: left;
+  padding-left: 43px;
+  border-radius: 5px;
+  padding-right: 43px;
+}
+
+/*slides*/
+#accordion h3{
+  color: white;
+  background-color: #65b4c2;
+  text-align: center;
+  border-radius: 5px;
+}

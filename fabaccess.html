@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="fabaccess.css"/>
+
+<!--link jquery-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+    <title>Fabaccess</title>
+
+<!--script jquery-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#accordion" ).accordion({
+        collapsible: true
+      });
+    } );
+    </script>
+
+  </head>
+  <body>
+
+<header>
+
+  <img id="logo" src="http://i1.wp.com/www.openfactory42.org/wp-content/uploads/sites/17/2015/03/retina120x70.png?fit=228%2C140"/>
+
+
+<!--trois boutons dropdown de navigation-->
+
+<nav>
+
+<!--bouton 1-->
+  <div class="dropdown">
+    <button class="dropbtn1">Affectations</button>
+      <div class="dropdown-content1">
+        <a href="#">Création membre</a>
+        <a href="#">Droits utilisations</a>
+        <a href="#">Compte prépayé</a>
+      </div>
+  </div>
+
+
+<!--bouton 2-->
+  <div class="dropdown">
+    <button class="dropbtn2">Adhérents</button>
+      <div class="dropdown-content2">
+        <a href="#">Liste adhérents</a>
+        <a href="#">Contact</a>
+      </div>
+  </div>
+
+
+<!--bouton 3-->
+  <div class="dropdown">
+    <button class="dropbtn3">Equipements</button>
+      <div class="dropdown-content3">
+        <a href="#">Gestion badgeurs / tarifs</a>
+        <a href="#">Stats</a>
+        <a href="#">Incidents</a>
+        <a href="#">Calendrier</a>
+      </div>
+  </div>
+
+</nav>
+
+</header>
+
+
+<main>
+
+<!--texte présentation accordeon-->
+
+  <div id="accordion">
+    <!--slide 1-->
+    <h3>Histoire du projet</h3>
+      <div>
+        <p>OpenFactorySainté est une Usine Ouverte (Open Factory) à mi-chemin entre un FabLab, un TechShop et un HackerSpace, un projet d’ambition pour le territoire stéphanois et le quartier créatif Manufacture-Plaine Achille.Également appelé le « FabLab du Quartier Créatif », OpenFactory constitue un lieu ouvert à tous et toutes, permettant d’accéder à des outils de conception, de simulation et de maquettage numérique. Il assure par ailleurs l’accès en temps partagé à des outils de fabrication numérique, incluant un atelier électronique ou des machines-outils : découpeuse laser, fraiseuse, imprimantes 3D, découpeuse laser, machine à coudre, découpeuse à vinyle.
+OpenFactory est le fruit de la conjugaison des compétences de plusieurs acteurs spécialisés dans l’activité de la fabrication numérique, du design et du conseil afin de se doter d’un processus unique dédié à l’innovation et au service du développement de l’économie ligérienne.</p>
+      </div>
+
+<!--slide 2-->
+    <h3>Missions et fonctions</h3>
+      <div>
+        <p>Un lieu d’échanges convivial d’appropriation des nouvelles technologies, du Do It Yourself, et de l’innovation par les usages.
+Un atelier de fabrication partagé, à destination des professionnels pour la réalisation de prototypes et expérimentations, avec imprimantes 3D, circuits imprimés, découpeuse vinyle, etc.
+Une équipe d’accompagnement de projets d’entreprises : Support technique allant de la résolution d’une problématique particulière jusqu’à l’accompagnement sur mesure d’un projet d’envergure.
+Une communauté de développement de projets collaboratifs made in Quartier Créatif ! </p>
+      </div>
+
+<!--slide 3-->
+    <h3>Objectifs</h3>
+      <div>
+        <ul>
+          <li>contribuer à l’amélioration du système d’apprentissage des établissements d’enseignement par le « Do It Yourself » et l’open source</li>
+          <li>créer des emplois autour de « small business » locaux (coopératives)</li>
+          <li>(ré)apprendre à nos concitoyens à (re)rentrer dans les processus de production par les usages et la pratique (consom’acteur) Lexique DIY (Do It Yourself)</li>
+        </ul>
+      </div>
+
+  </div>
+
+
+
+</main>
+
+
+  </body>
+</html>
