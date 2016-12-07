@@ -1,0 +1,81 @@
+# commandes pour installer les librairie de voix
+
+
+sudo apt-get install espeak
+
+wget http://tcts.fpms.ac.be/synthesis/mbrola/bin/pclinux/mbr301h.zip
+
+wget http://tcts.fpms.ac.be/synthesis/mbrola/dba/fr1/fr1-990204.zip
+
+wget http://tcts.fpms.ac.be/synthesis/mbrola/dba/fr4/fr4-990521.zip
+
+sudo mkdir /opt/mbrola
+
+udo unzip mbr301h.zip -d /opt/mbrola
+
+sudo ln -s /opt/mbrola/mbrola-linux-i386 /usr/bin/mbrola
+
+sudo unzip fr1-990204.zip -d /opt/mbrola
+
+sudo unzip fr4-990521.zip -d /opt/mbrola/fr4
+
+sudo apt-get install speech-dispatcher
+
+sudo apt-get install python-speechd
+
+sudo gedit /etc/speech-dispatcher/speechd.conf
+
+	#Dans ce fichier, on peut définir : le module de synthèse vocal, la langue et la voix de la synthèse qui doivent être utilisés par défaut. Modifiez le fichier de la façon suivante :
+
+DefaultVoiceType  "FEMALE1"
+DefaultLanguage  "fr"
+DefaultModule espeak-generic
+
+	#Il faut aussi activer le module 'espeak-generic' que l'on souhaite utiliser en décommentant la ligne du fichier le définissant :
+
+AddModule "espeak-generic" "sd_generic" "espeak-generic.conf"
+
+sudo gedit /etc/speech-dispatcher/modules/espeak-generic.conf
+
+	#Dans ce fichier, il faut redéfinir la ligne de commande à utiliser pour faire la synthèse. Par défaut il y a :
+
+GenericExecuteSynth \
+"echo \"$DATA\" | espeak -w /tmp/espeak.wav -v $VOICE -s $RATE -a $VOLUME -p $PITCH $PUNCT --stdin && paplay /tmp/espeak.wav"
+
+	#A la place on va mettre une ligne basée sur celle que l'on utilisait en ligne de commande, avec quelques spécificités liées à l'utilisation de mbrola :
+
+GenericExecuteSynth \
+"MBVOICE=$VOICE \
+&& echo \"$DATA\" \
+| espeak -v mb/mb-$MBVOICE $PUNCT --stdin \
+| mbrola -t $(awk 'BEGIN{print $RATE/10}') \
+         -v $(awk 'BEGIN{print $VOLUME/100}') \
+         -f $(awk 'BEGIN{print $PITCH/10}') \
+         -e -C \"n n2\" /opt/mbrola/$MBVOICE/$MBVOICE - -.au \
+| paplay"
+
+	#On va aussi redéfinir la voix MALE1 pour le français, et ajouter la voix féminine du français qui n'est pas définie dans ce fichier :
+
+AddVoice        "fr"    "MALE1"	"fr1"
+AddVoice        "fr"    "FEMALE1"	"fr4"
+
+	#Et il faut aussi redéfinir les coefficient pour les paramètres volume/pitch/rate :
+
+GenericRateAdd          10
+GenericPitchAdd         10
+GenericVolumeAdd        0
+
+GenericRateMultiply     100
+GenericPitchMultiply    100
+GenericVolumeMultiply   100
+
+sudo gedit /etc/default/speech-dispatcher
+
+	#Mettre 
+
+"RUN=yes" au lieu de "RUN=no"
+
+	#puis sauver le fichier.
+	On peut alors lancer le service de la façon suivante :
+
+ sudo /etc/init.d/speech-dispatcher start
