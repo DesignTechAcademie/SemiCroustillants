@@ -1,0 +1,46 @@
+body{
+  background-image: url("http://i1.wp.com/www.openfactory42.org/wp-content/uploads/sites/17/2015/03/retina120x70.png?fit=228%2C140");
+background-repeat:no-repeat;
+background-position:center;
+}
+
+.login{
+  margin-left: 343px;
+  margin-top: 305px;
+}
+
+/*les deux boutons*/
+
+input{
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 1px;
+  padding-left: 10px;
+  background-color: #66b4c1;
+  color: white;
+  width: 290px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+/*le bouton de validation*/
+
+.connexion{
+  margin-left: 168px;
+  margin-top: 20px;
+  position: absolute;
+  border: 1px solid #66b4c1;
+  color: #66b4c1;
+  background-color: white;
+}
+
+/*effet hover du bouton de validation*/
+
+.connexion:hover{
+  border: none;
+  color: white;
+  background-color: #66b4c1;
+}
