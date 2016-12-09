@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+$=""
+pico2wave -l fr-FR -w $.wav "$";
